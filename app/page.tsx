@@ -760,12 +760,14 @@ export default function Home() {
                   { label: 'Dance', text: 'Dance/EDM, energetic beat, big chorus drop, clean pop vocals, festival vibe.' },
                   { label: 'Country', text: 'Modern country, acoustic guitar + light drums, storytelling lyrics, warm chorus.' },
                   { label: 'Latin', text: 'Latin pop/reggaeton vibe, syncopated rhythm, upbeat, summer feel, catchy hook.' },
+                  { label: 'Worship', text: 'Peaceful worship song with acoustic guitar, heartfelt lyrics, uplifting chorus.' },
                 ]
               : [
                   { label: 'Pop', text: 'Pop alegre, coro pegajoso, sintetizadores brillantes, letra positiva, 120 BPM.' },
                   { label: 'Dance', text: 'Dance/EDM, ritmo enérgico, gran "drop" en el coro, voces pop limpias, vibra de festival.' },
                   { label: 'Country', text: 'Country moderno, guitarra acústica + percusión suave, letra narrativa, coro cálido.' },
                   { label: 'Latin', text: 'Vibra de pop latino/reggaetón, ritmo sincopado, animado, sensación de verano, gancho pegajoso.' },
+                  { label: 'Alabanza', text: 'Canción de alabanza tranquila con guitarra acústica, letra sincera y coro inspirador.' },
                 ]
             ).map((tmpl) => (
               <button
@@ -777,6 +779,14 @@ export default function Home() {
                 {tmpl.label}
               </button>
             ))}
+            {/* More examples button */}
+            <button
+              type="button"
+              onClick={() => setShowTips(true)}
+              className="px-3 py-1.5 rounded-full bg-purple-100 border border-purple-300 text-xs font-semibold text-purple-700 hover:bg-purple-200 transition shadow-sm"
+            >
+              {language === 'en' ? '💡 More Examples' : '💡 Más Ejemplos'}
+            </button>
           </div>
 
           <div className="relative">
