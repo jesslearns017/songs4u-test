@@ -756,16 +756,16 @@ export default function Home() {
           <div className="flex flex-wrap gap-2 justify-center">
             {(language === 'en'
               ? [
-                  { label: 'Pop', text: 'Upbeat pop song with catchy chorus, bright synths, feel-good vibe.' },
-                  { label: 'Lullaby', text: 'Gentle lullaby with soft piano, calming vocals, slow tempo.' },
-                  { label: 'Worship', text: 'Peaceful worship song with acoustic guitar, heartfelt lyrics, uplifting chorus.' },
-                  { label: 'Holiday', text: 'Festive holiday song, warm bells, cheerful melody, family-friendly lyrics.' },
+                  { label: 'Pop', text: 'Upbeat pop, catchy chorus, bright synths, positive lyrics, 120 BPM.' },
+                  { label: 'Dance', text: 'Dance/EDM, energetic beat, big chorus drop, clean pop vocals, festival vibe.' },
+                  { label: 'Country', text: 'Modern country, acoustic guitar + light drums, storytelling lyrics, warm chorus.' },
+                  { label: 'Latin', text: 'Latin pop/reggaeton vibe, syncopated rhythm, upbeat, summer feel, catchy hook.' },
                 ]
               : [
-                  { label: 'Pop', text: 'Canción pop alegre con coro pegajoso, sintetizadores brillantes y buen ánimo.' },
-                  { label: 'Nana', text: 'Nana suave con piano, voz calmada y tempo lento.' },
-                  { label: 'Alabanza', text: 'Canción de alabanza tranquila con guitarra acústica y coro inspirador.' },
-                  { label: 'Navidad', text: 'Canción navideña festiva con campanas y letra familiar.' },
+                  { label: 'Pop', text: 'Pop alegre, coro pegajoso, sintetizadores brillantes, letra positiva, 120 BPM.' },
+                  { label: 'Dance', text: 'Dance/EDM, ritmo enérgico, gran "drop" en el coro, voces pop limpias, vibra de festival.' },
+                  { label: 'Country', text: 'Country moderno, guitarra acústica + percusión suave, letra narrativa, coro cálido.' },
+                  { label: 'Latin', text: 'Vibra de pop latino/reggaetón, ritmo sincopado, animado, sensación de verano, gancho pegajoso.' },
                 ]
             ).map((tmpl) => (
               <button
