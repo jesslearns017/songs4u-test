@@ -505,11 +505,11 @@ export default function Home() {
         </details>
 
         {/* Optional: let users bring their own Suno API key */}
-        <div className="mb-4 px-4 py-3 bg-indigo-50 border border-indigo-200 rounded-lg text-xs text-gray-700">
+        <div className="mb-4 px-4 py-3 bg-purple-50 border border-purple-200 rounded-lg text-xs text-gray-700">
           <button
             type="button"
             onClick={() => setShowApiKeyInput(!showApiKeyInput)}
-            className="w-full flex items-center justify-center gap-2 text-indigo-700 font-semibold"
+            className="w-full flex items-center justify-center gap-2 text-purple-700 font-semibold"
           >
             <span>{language === 'en' ? 'Use my own Suno API key' : 'Usar mi propia clave de Suno'}</span>
             <span className="text-sm">{showApiKeyInput ? '−' : '+'}</span>
@@ -522,7 +522,7 @@ export default function Home() {
                 value={userApiKey}
                 onChange={(e) => setUserApiKey(e.target.value)}
                 placeholder={language === 'en' ? 'Paste your Suno API key here' : 'Pega aquí tu clave de Suno'}
-                className="w-full px-3 py-2 border border-indigo-300 rounded-md text-xs focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-white"
+                className="w-full px-3 py-2 border border-purple-300 rounded-md text-xs focus:outline-none focus:ring-2 focus:ring-purple-400 bg-white"
               />
               <p className="text-[11px] text-gray-500">
                 {language === 'en'
@@ -542,7 +542,7 @@ export default function Home() {
                     }
                     setShowApiKeyInput(false);
                   }}
-                  className="px-3 py-1.5 bg-indigo-600 text-white rounded-md text-xs font-semibold hover:bg-indigo-700"
+                  className="px-3 py-1.5 bg-purple-600 text-white rounded-md text-xs font-semibold hover:bg-purple-700"
                 >
                   {language === 'en' ? 'Save key' : 'Guardar clave'}
                 </button>
