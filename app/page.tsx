@@ -492,9 +492,9 @@ export default function Home() {
           </h1>
         </div>
         {/* How it works overview - collapsible */}
-        <details className="mb-3 text-center text-[11px] text-gray-700 leading-snug rounded-lg border border-purple-100 bg-white/60 px-3 py-2">
-          <summary className="cursor-pointer font-semibold text-purple-700 text-[11px] list-none flex items-center justify-center gap-1">
-            {t.howItWorksTitle} <span className="text-gray-400 text-[10px]">({language === 'en' ? 'tap' : 'toca'})</span>
+        <details className="mb-3 text-center text-sm text-gray-700 leading-snug rounded-lg border border-purple-100 bg-white/60 px-3 py-2">
+          <summary className="cursor-pointer font-semibold text-purple-700 text-sm list-none flex items-center justify-center gap-1">
+            {t.howItWorksTitle} <span className="text-gray-400 text-xs">({language === 'en' ? 'tap' : 'toca'})</span>
           </summary>
           <div className="mt-2">
             <p className="mb-0.5">{t.howItWorks1}</p>
@@ -637,14 +637,14 @@ export default function Home() {
         <div className="flex justify-center gap-4 mb-4">
           <button
             onClick={checkCredits}
-            className="flex items-center gap-1 text-xs text-purple-600 hover:text-purple-800 transition font-medium"
+            className="flex items-center gap-1 text-sm text-purple-600 hover:text-purple-800 transition font-medium"
           >
             <span>💰</span>
             <span>{language === 'en' ? 'Credits' : 'Créditos'} {credits !== null && `(${credits})`}</span>
           </button>
           <button
             onClick={loadSongHistory}
-            className="flex items-center gap-1 text-xs text-pink-600 hover:text-pink-800 transition font-medium"
+            className="flex items-center gap-1 text-sm text-pink-600 hover:text-pink-800 transition font-medium"
           >
             <span>🕘</span>
             <span>{showSongs ? (language === 'en' ? 'Hide History' : 'Ocultar') : (language === 'en' ? 'History' : 'Historial')}</span>
