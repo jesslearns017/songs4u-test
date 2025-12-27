@@ -73,3 +73,12 @@ input::placeholder {
   color: #6b7280;
   opacity: 1;
 }
+
+/* Hide scrollbar for template chips on mobile */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

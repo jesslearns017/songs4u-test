@@ -752,41 +752,45 @@ export default function Home() {
             {t.subtitle}
           </p>
 
-          {/* Template chips */}
-          <div className="flex flex-wrap gap-2 justify-center">
-            {(language === 'en'
-              ? [
-                  { label: 'Pop', text: 'Upbeat pop, catchy chorus, bright synths, positive lyrics, 120 BPM.' },
-                  { label: 'Dance', text: 'Dance/EDM, energetic beat, big chorus drop, clean pop vocals, festival vibe.' },
-                  { label: 'Country', text: 'Modern country, acoustic guitar + light drums, storytelling lyrics, warm chorus.' },
-                  { label: 'Latin', text: 'Latin pop/reggaeton vibe, syncopated rhythm, upbeat, summer feel, catchy hook.' },
-                  { label: 'Worship', text: 'Peaceful worship song with acoustic guitar, heartfelt lyrics, uplifting chorus.' },
-                ]
-              : [
-                  { label: 'Pop', text: 'Pop alegre, coro pegajoso, sintetizadores brillantes, letra positiva, 120 BPM.' },
-                  { label: 'Dance', text: 'Dance/EDM, ritmo enérgico, gran "drop" en el coro, voces pop limpias, vibra de festival.' },
-                  { label: 'Country', text: 'Country moderno, guitarra acústica + percusión suave, letra narrativa, coro cálido.' },
-                  { label: 'Latin', text: 'Vibra de pop latino/reggaetón, ritmo sincopado, animado, sensación de verano, gancho pegajoso.' },
-                  { label: 'Alabanza', text: 'Canción de alabanza tranquila con guitarra acústica, letra sincera y coro inspirador.' },
-                ]
-            ).map((tmpl) => (
+          {/* Template chips - horizontally scrollable on mobile */}
+          <div className="relative">
+            <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide sm:flex-wrap sm:justify-center sm:overflow-visible">
+              {(language === 'en'
+                ? [
+                    { label: 'Pop', text: 'Upbeat pop, catchy chorus, bright synths, positive lyrics, 120 BPM.' },
+                    { label: 'Dance', text: 'Dance/EDM, energetic beat, big chorus drop, clean pop vocals, festival vibe.' },
+                    { label: 'Country', text: 'Modern country, acoustic guitar + light drums, storytelling lyrics, warm chorus.' },
+                    { label: 'Latin', text: 'Latin pop/reggaeton vibe, syncopated rhythm, upbeat, summer feel, catchy hook.' },
+                    { label: 'Worship', text: 'Peaceful worship song with acoustic guitar, heartfelt lyrics, uplifting chorus.' },
+                  ]
+                : [
+                    { label: 'Pop', text: 'Pop alegre, coro pegajoso, sintetizadores brillantes, letra positiva, 120 BPM.' },
+                    { label: 'Dance', text: 'Dance/EDM, ritmo enérgico, gran "drop" en el coro, voces pop limpias, vibra de festival.' },
+                    { label: 'Country', text: 'Country moderno, guitarra acústica + percusión suave, letra narrativa, coro cálido.' },
+                    { label: 'Latin', text: 'Vibra de pop latino/reggaetón, ritmo sincopado, animado, sensación de verano, gancho pegajoso.' },
+                    { label: 'Alabanza', text: 'Canción de alabanza tranquila con guitarra acústica, letra sincera y coro inspirador.' },
+                  ]
+              ).map((tmpl) => (
+                <button
+                  key={tmpl.label}
+                  type="button"
+                  onClick={() => setPrompt(tmpl.text)}
+                  className="px-3 py-1.5 rounded-full bg-white border border-purple-200 text-xs font-semibold text-purple-700 hover:bg-purple-50 transition shadow-sm whitespace-nowrap flex-shrink-0"
+                >
+                  {tmpl.label}
+                </button>
+              ))}
+              {/* More examples button */}
               <button
-                key={tmpl.label}
                 type="button"
-                onClick={() => setPrompt(tmpl.text)}
-                className="px-3 py-1.5 rounded-full bg-white border border-purple-200 text-xs font-semibold text-purple-700 hover:bg-purple-50 transition shadow-sm"
+                onClick={() => setShowTips(true)}
+                className="px-3 py-1.5 rounded-full bg-purple-100 border border-purple-300 text-xs font-semibold text-purple-700 hover:bg-purple-200 transition shadow-sm whitespace-nowrap flex-shrink-0"
               >
-                {tmpl.label}
+                {language === 'en' ? '💡 More' : '💡 Más'}
               </button>
-            ))}
-            {/* More examples button */}
-            <button
-              type="button"
-              onClick={() => setShowTips(true)}
-              className="px-3 py-1.5 rounded-full bg-purple-100 border border-purple-300 text-xs font-semibold text-purple-700 hover:bg-purple-200 transition shadow-sm"
-            >
-              {language === 'en' ? '💡 More Examples' : '💡 Más Ejemplos'}
-            </button>
+            </div>
+            {/* Fade hint on right edge for mobile */}
+            <div className="absolute right-0 top-0 bottom-2 w-6 bg-gradient-to-l from-purple-50 to-transparent pointer-events-none sm:hidden"></div>
           </div>
 
           <div className="relative">
