@@ -811,14 +811,14 @@ export default function Home() {
             {t.generationTime} ⏱️
           </p>
 
-          {/* Important notice - collapsible and neutral */}
-          <details className="px-4 py-3 bg-blue-50 border border-blue-200 rounded-lg text-xs text-gray-700">
-            <summary className="cursor-pointer font-semibold text-blue-700 list-none text-center flex items-center justify-center gap-1">
-              ℹ️ {language === 'en' ? 'Important' : 'Importante'} <span className="text-gray-400 text-[10px]">({language === 'en' ? 'tap' : 'toca'})</span>
+          {/* Important notice - collapsible, purple bg with red text */}
+          <details className="px-4 py-3 bg-purple-50 border border-purple-200 rounded-lg text-xs text-gray-700">
+            <summary className="cursor-pointer font-semibold text-red-600 list-none text-center flex items-center justify-center gap-1">
+              ⚠️ {language === 'en' ? 'Important' : 'Importante'} <span className="text-gray-400 text-[10px]">({language === 'en' ? 'tap' : 'toca'})</span>
             </summary>
             <div className="mt-2 text-center">
-              <p className="font-semibold text-blue-700 mb-1">{t.oneTimeNotice}</p>
-              <p className="text-[11px] leading-snug">{t.legalDisclaimer}</p>
+              <p className="font-semibold text-red-600 mb-1">{t.oneTimeNotice}</p>
+              <p className="text-[11px] leading-snug text-gray-600">{t.legalDisclaimer}</p>
             </div>
           </details>
 
