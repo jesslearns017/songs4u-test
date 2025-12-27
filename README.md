@@ -141,10 +141,13 @@ Make sure to set the `SUNOAPI_ORG` environment variable in your deployment platf
 This version includes:
 - Collapsible "How it works" section
 - Collapsible "Important" notice (purple bg + red text)
+- Collapsible "Use my own Suno API key" section
 - Sticky mobile Generate button
-- Template chips: Pop, Dance, Country, Latin, Worship, 💡 More Examples
+- Template chips: Pop, Dance, Country, Latin, Worship, 💡 More
+- Horizontally scrollable chips on mobile (with fade hint)
 - Subtle Credits/History links
 - Larger textarea for detailed prompts
+- Purple theme throughout
 
 ## 📄 License
 
