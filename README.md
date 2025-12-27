@@ -145,7 +145,7 @@ This version includes:
 - Sticky mobile Generate button
 - Template chips: Pop, Dance, Country, Latin, Worship, 💡 More
 - Horizontally scrollable chips on mobile (with fade hint)
-- Subtle Credits/History links
+- Credits/History pill buttons (purple/pink)
 - Larger textarea for detailed prompts
 - Purple theme throughout
 
