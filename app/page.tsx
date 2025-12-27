@@ -633,18 +633,18 @@ export default function Home() {
           )}
         </div>
 
-        {/* Credits/History - subtle top nav style */}
-        <div className="flex justify-center gap-4 mb-4">
+        {/* Credits/History - small button style */}
+        <div className="flex justify-center gap-3 mb-4">
           <button
             onClick={checkCredits}
-            className="flex items-center gap-1 text-sm text-purple-600 hover:text-purple-800 transition font-medium"
+            className="flex items-center gap-1.5 px-3 py-1.5 text-sm text-purple-700 bg-purple-100 hover:bg-purple-200 border border-purple-200 rounded-full transition font-medium shadow-sm"
           >
             <span>💰</span>
             <span>{language === 'en' ? 'Credits' : 'Créditos'} {credits !== null && `(${credits})`}</span>
           </button>
           <button
             onClick={loadSongHistory}
-            className="flex items-center gap-1 text-sm text-pink-600 hover:text-pink-800 transition font-medium"
+            className="flex items-center gap-1.5 px-3 py-1.5 text-sm text-pink-700 bg-pink-100 hover:bg-pink-200 border border-pink-200 rounded-full transition font-medium shadow-sm"
           >
             <span>🕘</span>
             <span>{showSongs ? (language === 'en' ? 'Hide History' : 'Ocultar') : (language === 'en' ? 'History' : 'Historial')}</span>
