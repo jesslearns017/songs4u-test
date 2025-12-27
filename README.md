@@ -1,4 +1,4 @@
-# 🎵 AI Music Generator
+# 🎵 Songs4u - AI Music Generator
 
 A beautiful Next.js application that generates music using the Suno AI API. Simply describe your song idea, and let AI create it for you!
 
@@ -12,6 +12,9 @@ A beautiful Next.js application that generates music using the Suno AI API. Simp
 - **Credits Management** - Check your API credits
 - **Content Moderation** - Built-in validation for appropriate content
 - **Beautiful UI** - Modern, responsive design with animated music notes
+- **Bilingual Support** - English and Spanish interface
+- **Template Chips** - Quick-start prompts for Pop, Dance, Country, Latin, Worship
+- **Mobile-Optimized** - Sticky generate button on mobile devices
 
 ## 🚀 Getting Started
 
@@ -79,7 +82,7 @@ A beautiful Next.js application that generates music using the Suno AI API. Simp
 ## 📁 Project Structure
 
 ```
-music/
+songs4u/
 ├── app/
 │   ├── api/
 │   │   ├── generate/route.ts    # Music generation endpoint
@@ -133,9 +136,19 @@ This app can be deployed to:
 
 Make sure to set the `SUNOAPI_ORG` environment variable in your deployment platform.
 
+## 🎨 UI Version 1.5 (Current)
+
+This version includes:
+- Collapsible "How it works" section
+- Collapsible "Important" notice (purple bg + red text)
+- Sticky mobile Generate button
+- Template chips: Pop, Dance, Country, Latin, Worship, 💡 More Examples
+- Subtle Credits/History links
+- Larger textarea for detailed prompts
+
 ## 📄 License
 
-Created with love for family and friends of Jessie ❤️
+Created with ❤️ for family and friends by Jessie
 
 Guidance from Dr. Lee
 
