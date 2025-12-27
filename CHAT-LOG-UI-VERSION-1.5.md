@@ -20,8 +20,9 @@
 | 6 | Horizontally scrollable chips | Single row on mobile with fade hint |
 | 7 | Subtle Credits/History links | Smaller, icon-based |
 | 8 | Larger textarea | h-48 instead of h-40 |
-| 9 | Increased font sizes | How it works, Credits, History |
+| 9 | Increased font sizes | How it works, Credits, History (text-xs → text-sm) |
 | 10 | Purple theme throughout | Replaced all blue/indigo with purple |
+| 11 | Credits/History pill buttons | Purple/pink backgrounds, rounded-full, shadow |
 
 ---
 
@@ -44,6 +45,9 @@
 7. `Increase font size for How it works, Credits, History`
 8. `Make template chips horizontally scrollable on mobile with fade hint`
 9. `Update README with scrollable chips and purple theme`
+10. `Add chat log for UI Version 1.5 implementation`
+11. `Make Credits and History look like pill buttons`
+12. `Update README: Credits/History pill buttons`
 
 ---
 
@@ -105,6 +109,12 @@ The full Version 2 redesign plan is saved in memory and includes:
   - `Songs4u UI Version 1 - Quick Wins`
   - `Songs4u UI Version 1.2 - Implementation Plan`
   - `Songs4u UI Version 2 - Complete Redesign`
+
+---
+
+## Workflow Rules
+
+- **Always update README.md** with every code change (saved as memory)
 
 ---
 
