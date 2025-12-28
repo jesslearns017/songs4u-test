@@ -748,10 +748,6 @@ export default function Home() {
         )}
 
         <div className="space-y-4">
-          <p className="text-gray-500 text-center text-[11px]">
-            {t.subtitle}
-          </p>
-
           {/* Template chips - horizontally scrollable on mobile */}
           <div className="relative">
             <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide sm:flex-wrap sm:justify-center sm:overflow-visible">
@@ -780,18 +776,23 @@ export default function Home() {
                   {tmpl.label}
                 </button>
               ))}
-              {/* More examples button */}
+              {/* Examples button */}
               <button
                 type="button"
                 onClick={() => setShowTips(true)}
                 className="px-3 py-1.5 rounded-full bg-purple-100 border border-purple-300 text-xs font-semibold text-purple-700 hover:bg-purple-200 transition shadow-sm whitespace-nowrap flex-shrink-0"
               >
-                {language === 'en' ? '💡 More' : '💡 Más'}
+                {language === 'en' ? '💡 Examples' : '💡 Ejemplos'}
               </button>
             </div>
             {/* Fade hint on right edge for mobile */}
             <div className="absolute right-0 top-0 bottom-2 w-6 bg-gradient-to-l from-purple-50 to-transparent pointer-events-none sm:hidden"></div>
           </div>
+
+          {/* Subtitle moved above textarea */}
+          <p className="text-gray-500 text-center text-sm">
+            {t.subtitle}
+          </p>
 
           <div className="relative">
             <textarea

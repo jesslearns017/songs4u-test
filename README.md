@@ -143,7 +143,8 @@ This version includes:
 - Collapsible "Important" notice (purple bg + red text)
 - Collapsible "Use my own Suno API key" section
 - Sticky mobile Generate button
-- Template chips: Pop, Dance, Country, Latin, Worship, 💡 More
+- Template chips: Pop, Dance, Country, Latin, Worship, 💡 Examples
+- "Describe your track..." subtitle moved above textarea for clarity
 - Horizontally scrollable chips on mobile (with fade hint)
 - Credits/History pill buttons (purple/pink)
 - Larger textarea for detailed prompts
