@@ -812,10 +812,6 @@ export default function Home() {
             </div>
           </div>
 
-          <p className="text-xs text-gray-500 text-center">
-            {t.generationTime} ⏱️
-          </p>
-
           {/* Important notice - collapsible, purple bg with red text */}
           <details className="px-4 py-3 bg-purple-50 border border-purple-200 rounded-lg text-xs text-gray-700">
             <summary className="cursor-pointer font-semibold text-red-600 list-none text-center flex items-center justify-center gap-1">
@@ -826,6 +822,11 @@ export default function Home() {
               <p className="text-[11px] leading-snug text-gray-600">{t.legalDisclaimer}</p>
             </div>
           </details>
+
+          {/* Generation time - moved above Generate button */}
+          <p className="text-xs text-gray-500 text-center">
+            {t.generationTime} ⏱️
+          </p>
 
           {/* Generate button - hidden on mobile, shown on sm+ */}
           <button
@@ -860,17 +861,17 @@ export default function Home() {
               <audio controls className="w-full" src={audioUrl}>
                 Your browser does not support audio playback.
               </audio>
-              <div className="flex rounded-lg overflow-hidden shadow-md">
+              {/* Download buttons - stack on mobile, row on desktop */}
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-0 sm:rounded-lg sm:overflow-hidden sm:shadow-md">
                 <button
                   onClick={downloadSong}
-                  className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 font-semibold hover:from-purple-700 hover:to-pink-700 transition flex items-center justify-center space-x-2"
+                  className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 font-semibold hover:from-purple-700 hover:to-pink-700 transition flex items-center justify-center space-x-2 rounded-lg sm:rounded-none shadow-md sm:shadow-none"
                 >
                   <span>🎵</span>
                   <span>{language === 'en' ? 'Download Song' : 'Descargar Canción'}</span>
                 </button>
                 {lyrics && (
                   <>
-                    <div className="w-px bg-purple-400"></div>
                     <button
                       onClick={() => {
                         const lyricsDiv = document.getElementById('lyrics-display');
@@ -878,15 +879,14 @@ export default function Home() {
                           lyricsDiv.classList.toggle('hidden');
                         }
                       }}
-                      className="flex-1 bg-gradient-to-r from-indigo-500 to-indigo-600 text-white py-3 font-semibold hover:from-indigo-600 hover:to-indigo-700 transition flex items-center justify-center space-x-2"
+                      className="flex-1 bg-gradient-to-r from-indigo-500 to-indigo-600 text-white py-3 font-semibold hover:from-indigo-600 hover:to-indigo-700 transition flex items-center justify-center space-x-2 rounded-lg sm:rounded-none shadow-md sm:shadow-none"
                     >
                       <span>👁️</span>
                       <span>{language === 'en' ? 'View Lyrics' : 'Ver Letra'}</span>
                     </button>
-                    <div className="w-px bg-indigo-400"></div>
                     <button
                       onClick={downloadLyrics}
-                      className="flex-1 bg-gradient-to-r from-purple-500 to-purple-600 text-white py-3 font-semibold hover:from-purple-600 hover:to-purple-700 transition flex items-center justify-center space-x-2"
+                      className="flex-1 bg-gradient-to-r from-purple-500 to-purple-600 text-white py-3 font-semibold hover:from-purple-600 hover:to-purple-700 transition flex items-center justify-center space-x-2 rounded-lg sm:rounded-none shadow-md sm:shadow-none"
                     >
                       <span>📝</span>
                       <span>{language === 'en' ? 'Download Lyrics' : 'Descargar Letra'}</span>

@@ -149,6 +149,8 @@ This version includes:
 - Credits/History pill buttons (purple/pink)
 - Larger textarea for detailed prompts
 - Purple theme throughout
+- Generation time message above Generate button
+- Download buttons stack vertically on mobile
 
 ## 📄 License
 
